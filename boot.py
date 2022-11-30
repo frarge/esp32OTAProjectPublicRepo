@@ -7,7 +7,6 @@ import senko
 import machine
 
 GITHUB_URL = "https://github.com/frarge/esp32project/"
-https://github.com/frarge/esp32project/
 OTA = senko.Senko(url=GITHUB_URL, files=["boot.py", "main.py"])
 
 wlan = network.WLAN(network.STA_IF)
