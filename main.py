@@ -3,4 +3,4 @@ from time import sleep
 led = Pin(2, Pin.OUT)
 while True:
   print("Hello World")
-  sleep(2000)
+  sleep(3000)
