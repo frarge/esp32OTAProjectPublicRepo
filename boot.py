@@ -5,12 +5,14 @@ import webrepl
 import network
 import senko
 import machine
+import gc
 
-GITHUB_URL = "https://github.com/frarge/esp32project/"
-OTA = senko.Senko(url=GITHUB_URL, files=["boot.py", "main.py"])
+
+
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
+
 if not wlan.isconnected():
     print('connecting to network...')
     wlan.connect('TIM-19910111', 'Semipaghitelado.95')
@@ -18,8 +20,15 @@ if not wlan.isconnected():
         pass
     print('network config:', wlan.ifconfig())
 
+        
+gc.collect()
+gc.enable()
+        
+OTA = senko.Senko(user="frarge", repo="esp32project", files = ["main.py"])
 if OTA.update():
     print("Updated to the latest version! Rebooting...")
     machine.reset()
-
+       
+    
 webrepl.start(password = "frarge95")
+
