@@ -4,3 +4,4 @@ led = Pin(2, Pin.OUT)
 while True:
   print("Hello World")
   sleep(3000)
+  print("ultimo aggiornamento")
