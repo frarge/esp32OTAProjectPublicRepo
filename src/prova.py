@@ -1,1 +1,1 @@
-print("modificato da browser")
+print("modificato da thonny per uGit")
