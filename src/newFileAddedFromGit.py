@@ -1,1 +1,1 @@
-Anche se stampa questo vuol dire che funziona
+print("Added from Git")
