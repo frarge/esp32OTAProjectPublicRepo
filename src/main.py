@@ -1,1 +1,1 @@
-print("Hello funziona davvero")
+print("Funziona")
